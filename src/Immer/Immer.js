@@ -16,7 +16,6 @@ import theme from "./imerTheme";
 import { Field } from "formik";
 import { CheckboxWithLabel } from "formik-material-ui";
 const numbersReducer = (state, action) => {
-  console.log(state);
   switch (action.type) {
     case "ADD_NUMBER":
       return produce(state, (draft) => {
@@ -48,9 +47,7 @@ const Immer = () => {
   const clearNumber = () => {
     dispatchNumbers({ type: "CLEAR_NUMBER" });
   };
-  console.log("rerender");
   const themee = useTheme();
-  console.log();
   return (
     <ThemeProvider theme={theme}>
       <div>

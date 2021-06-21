@@ -8,7 +8,6 @@ import { counter } from "./store";
 import { darkTheme, lightTheme } from "./theme";
 
 const Wrapper = observer(() => {
-  console.log("wrapper", dark.isDark);
   return (
     <>
       <ThemeProvider theme={dark.isDark ? darkTheme : lightTheme}>
