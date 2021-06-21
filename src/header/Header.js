@@ -54,7 +54,7 @@ const Header = observer(() => {
     }
     useEffect(() => {
         const checkIfMobile = () => {
-            if (window.innerWidth < 700) {
+            if (window.innerWidth < 1000) {
                 mobile.setToMobile()
             } else {
                 mobile.setToDesktop()
@@ -73,7 +73,7 @@ const Header = observer(() => {
             </AppBar>
             <Box className={box} color="primary" component="div" display="block">
                 <div>{dark.isDark ? "dark" : "light"}</div>
-                <Typography noWrap variant="h1" component="h6">
+                <Typography noWrap variant="h2" component="h6">
                     Lorem ipsum dolor sit amet consectetur
                 </Typography>
                 <Button color="secondary" variant="contained" fullWidth>hello vsem</Button>

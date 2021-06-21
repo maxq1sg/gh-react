@@ -14,7 +14,7 @@ const Wrapper = observer(() => {
       <ThemeProvider theme={dark.isDark ? darkTheme : lightTheme}>
         <div
           style={{
-            color: "red",
+            color: "blue",
             position: "absolute",
             top: "50%",
             left: "50%",
