@@ -15,7 +15,7 @@ const Checkboxes = (props) => {
     answers: yup.array().required("Дайте хотя бы один вариант ответа!"),
   });
   const onSubmit = (values, props) => {
-    console.log(values);
+    
   };
   return (
     <Formik {...{ initialValues, validationSchema, onSubmit }}>
@@ -23,8 +23,6 @@ const Checkboxes = (props) => {
         <Field name="answers">
           {({ field }) => {
             return cOptions.map((option) => {
-              console.log("f", field);
-              console.log("op", option);
               return (
                 <>
                   <input
