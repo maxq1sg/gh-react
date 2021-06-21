@@ -7,10 +7,15 @@ import Header from "./Header";
 import { counter } from "./store";
 import { darkTheme, lightTheme } from "./theme";
 
+const Block = () => {
+  return <div>i am block</div>;
+};
+
 const Wrapper = observer(() => {
   return (
     <>
       <ThemeProvider theme={dark.isDark ? darkTheme : lightTheme}>
+        <Block />
         <div
           style={{
             color: "blue",
