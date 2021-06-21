@@ -29,7 +29,6 @@ const Test3 = () => {
     });
   }, []);
   useEffect(() => {
-    console.log(savedDate);
   }, [savedDate]);
   const validationSchema = yup.object().shape({
     name: yup.string().required("this field is required").min(3),
@@ -42,8 +41,7 @@ const Test3 = () => {
   });
   const onSubmit = (values, props) => {
     localStorage.setItem("formData", JSON.stringify(values));
-    console.log("get", JSON.parse(localStorage.getItem("formData")));
-    console.log("data", values);
+   
     // setsavedDate(null);
     props.resetForm(initialValues);
 
@@ -59,14 +57,12 @@ const Test3 = () => {
       }}
     >
       {(props) => {
-        console.log(props.values);
         return (
           <Form>
             <div>
               {isShowing ? (
                 <button
                   onClick={() => {
-                    console.log("inside onclick");
                     setsavedDate(JSON.parse(localStorage.getItem("formData")));
                   }}
                 >
